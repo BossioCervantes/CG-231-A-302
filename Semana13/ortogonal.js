@@ -49,7 +49,7 @@ document.body.appendChild(renderer.domElement);
 function animate() {
 requestAnimationFrame(animate);
 
-// Se rota la pirámide sobre el eje Y
+// // Se cambian las posiciones y se agrega rotación a una piramide
 pyramid.rotation.y += 0.01;
 pyramid.position.x = -3;
 pyramid2.position.x = 3;

@@ -27,11 +27,13 @@ geometry.setIndex(new THREE.BufferAttribute(indices, 1));
 
 // material
 var material = new THREE.MeshBasicMaterial({ color: 0x00FFFF });
-
+var material2 = new THREE.MeshBasicMaterial({ color: 0x0000FF });
 // malla de la pirámide
 var pyramid = new THREE.Mesh(geometry, material);
+var pyramid2 = new THREE.Mesh(geometry, material2);
 var scene = new THREE.Scene();
 scene.add(pyramid);
+scene.add(pyramid2);
 
 // cámara ortográfica
 var camera = new THREE.OrthographicCamera(window.innerWidth / -100, window.innerWidth / 100, window.innerHeight / 100, window.innerHeight / -100, 0.1, 100);
@@ -49,6 +51,8 @@ requestAnimationFrame(animate);
 
 // Se rota la pirámide sobre el eje Y
 pyramid.rotation.y += 0.01;
+pyramid.position.x = -3;
+pyramid2.position.x = 3;
 
 // Renderizar la escena con la cámara actual
 renderer.render(scene, camera);

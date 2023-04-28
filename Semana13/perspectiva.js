@@ -54,7 +54,6 @@ function animate() {
   requestAnimationFrame(animate);
 
   // Rotar la pirámide sobre el eje Y
- // pyramid.rotation.y += 0.01;
   pyramid.position.x = -3;
   pyramid2.position.x = 4;
   pyramid.position.y = 3;
